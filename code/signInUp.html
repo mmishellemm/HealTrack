@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealTrack-signInUp</title>
+    <title>HealTrack-Tracker</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
-<style>
-    body {
-      background-color: #9ecdc6; /* Light blue background */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
 <body>
     <!-- Header -->
     <header>
@@ -35,43 +27,27 @@
             <div class="content">
                 <div id="tracker"></div>
                 <div id="report">
-                    <h2 id="form-title">Sign Up</h2>
+                    <h2 id="form-title">Track Your Symptoms</h2>
                     <form>
-                        <label id="symptoms-label" for="username">Username:</label>
-                        <input type="text" step="any" id="systems" name="systems" required placeholder="Create Your Username...">
+                        <label id="symptoms-label" for="symptoms">Symptoms:</label>
+                        <input type="text" step="any" id="systems" name="systems" placeholder="Enter Your Symptoms...">
 
-                        <label id="password-label" for="date">Password:</label>
-                        <input type="text" id="password" name="password" required placeholder = "Create Your Password...">
+                        <label id="date-label" for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
 
-                        <label id="dob-label" for="date">Date of Birth:</label>
-                        <input type="date" id="date" name="date">
+                        <label id="time-label" for="time">Time:</label>
+                        <input type="time" id="time" name="time">
 
-                       <!-- <label id="details-label" for="details">Details:</label>
-                        <textarea id="details" name="details" placeholder="Provide specific details..." required></textarea>-->
+                        <label id="details-label" for="details">Details:</label>
+                        <textarea id="details" name="details" placeholder="Provide specific details..." required></textarea>
 
-                        <button type="signInUp" id="signInUp-button">Sign In / Sign Up</button>
+                        <button type="submit" id="submit-button">Submit Report</button>
                     </form>
                 </div>
             </div>
         </div>
         <!-- need to also display a list consisting of previous symptoms -->
     </main>
-    <div class="container">
-        <div class="content">
-        <div id="tracker"></div>
-        <div id="report">
-            <h2 id="form-title">Sign In</h2>
-            <form>
-            <label id="symptoms-label" for="username">Username:</label>
-            <input type="text" id="username" name="username" required placeholder="Enter Your Username...">
 
-            <label id="password-label" for="password">Password:</label>
-            <input type="password" id="password" name="password" required placeholder="Enter Your Password...">
-
-            <button type="submit" id="signIn-button">Sign In</button>
-            </form>
-        </div>
-        </div>
-    </div>
 </body>
 </html>
