@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealTrack-Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+        
+</head>
+<style>
+    body {
+      background-color: #9ecdc6; /* Light blue background */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class= "navbar">
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="trackerPage.html">Tracker</a></li>
+                <li><a href="recordsPage.html">Records</a></li>
+                <li><a href="physicians.html">Physicians</a></li>
+                <li><a href="helplinePage.html">Helplines</a></li>
+                <li><a href="signInUpPage.html"> Sign In / Sign Up</a></li>
+            </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="content">
+                <div id="tracker"></div>
+                <div id="report">
+                    <h2 id="form-title">Track Your Symptoms</h2>
+                    <form>
+                        <label id="symptoms-label" for="symptoms">Symptoms:</label>
+                        <input type="text" step="any" id="systems" name="systems" placeholder="Enter Your Symptoms...">
+                    
+                        <label id="date-label" for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label id="time-label" for="time">Time:</label>
+                        <input type="time" id="time" name="time">
+
+                        <label id="details-label" for="details">Details:</label>
+                        <textarea id="details" name="details" placeholder="Provide specific details..." required></textarea>
+
+                        <button type="submit" id="submit-button">Submit Report</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- need to also display a list consisting of previous symptoms -->
+    </main>
+
+</body>
+</html>

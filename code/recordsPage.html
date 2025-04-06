@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealTrack-Records</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background-color: #9ecdc6; /* Light blue background */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .upload-container {
+        background-color: white; /* White box */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 1000px;
+        margin: 50px auto; /* Center the container */
+      }
+
+      .upload-container h2 {
+        text-align: center;
+      }
+
+      .upload-container button {
+        display: block;
+        width: 100px; /* Smaller button width */
+        margin: 10px auto; /* Center the button */
+        padding: 5px;
+        background-color: #2fab9a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .upload-container button:hover {
+        background-color: #1f6d63;
+      }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+          <ul>
+              <li><a href="homePage.html">Home</a></li>
+              <li><a href="trackerPage.html">Tracker</a></li>
+              <li><a href="recordsPage.html">Records</a></li>
+              <li><a href="physicians.html">Physicians</a></li>
+              <li><a href="helplinePage.html">Helplines</a></li>
+              <li><a href="signInUpPage.html"> Sign In / Sign Up</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="upload-container">
+        <h2>Upload Medical Records</h2>
+        <form id="uploadForm">
+            <div class="file-input">
+                <label for="fileUpload">Select Image:</label>
+                <input type="file" id="fileUpload" accept="image/*" required>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+        <div class="file-list">
+            <h3>Uploaded Files:</h3>
+            <ul id="fileList"></ul>
+        </div>
+    </div>
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const fileUpload = document.getElementById('fileUpload');
+        const fileList = document.getElementById('fileList');
+
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const file = fileUpload.files[0];
+            if (file) {
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name;
+                fileList.appendChild(listItem);
+                fileUpload.value = ''; // Clear the input
+            } else {
+                alert('Please select a file to upload.');
+            }
+        });
+    </script>
+</body>
+</html>
